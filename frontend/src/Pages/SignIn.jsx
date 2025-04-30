@@ -35,8 +35,7 @@ function SignIn() {
             const response = await axios.post("http://localhost:5000/api/auth/signin", formData);
             alert("Signed In Successfully!");
             console.log("User data:", response.data.user);
-            // You can also store user data or token here
-            navigate("/"); // Navigate to home or dashboard
+            navigate("/"); 
         } catch (error) {
             console.error("Signin failed:", error.response?.data?.message || error.message);
             alert(error.response?.data?.message || "Sign In Failed");
